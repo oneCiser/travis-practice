@@ -1,3 +1,12 @@
 language: node_js
 node_js:
   - 15.7.0
+script:
+  - node index.js
+deploy:
+ provider: releases
+ api_key: $GITHUB_TOKEN
+ file: index.js
+ on:
+  tags: false
+  branch: master
