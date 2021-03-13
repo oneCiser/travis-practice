@@ -1,16 +1,13 @@
-languaje: node_js
+os: windows
+language: node_js
 node_js:
   - 15.7.0
 script:
   - node index.js
-
 deploy:
-  provider: releases
-  github-token: $GITHUB_TOKEN
-  file: .
-  skip_cleanup: true
-  on:
-    tags: false
-    branches:
-      only:
-        - main
+ provider: releases
+ token: $GITHUB_TOKEN
+ file: .
+ on:
+  tags: false
+  branch: master
