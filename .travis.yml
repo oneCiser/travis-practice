@@ -1,0 +1,16 @@
+languaje: node_js
+node_js:
+  - 15.7.0
+script:
+  - node index.js
+
+deploy:
+  provider: releases
+  api_key: "ed0b0498540ed1cadb03e1c1915c9fd94ff3dfd7"
+  file: .
+  skip_cleanup: true
+  on:
+    tags: false
+    branches:
+      only:
+        - main
